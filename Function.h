@@ -4,6 +4,6 @@ auto twice(auto x) {
   if (x >= 0) {
     return 2 * x;
   } else {
-    return -42 * x;
+    return -2* x;
   }
 }

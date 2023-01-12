@@ -2,16 +2,19 @@ name: Codecov
 
 on:
   push:
-    branches:
-      -master
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 
 jobs:
   coverage:
     runs-on: ubuntu-22.04
-    if: github.repository_owner == 'joka921'
 
     steps:
     - uses: actions/checkout@v3
+    - name: Checkout Submodules
+      run: git submodule update --init --recursive
 
     - name: Install LCov
       run: sudo apt-get update -q
