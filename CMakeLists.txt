@@ -1,6 +1,7 @@
 project(CodeCoverage)
 cmake_minimum_required(VERSION 3.15)
 set(CMAKE_CXX_STANDARD 20)
+find_package(Threads REQUIRED)
 add_subdirectory(googletest EXCLUDE_FROM_ALL)
 include(GoogleTest)
 include_directories(googletest/googletest/include)
