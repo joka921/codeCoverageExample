@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Checkout Submodules
+      run: git submodule update --init --recursive
 
     - name: Install LCov
       run: sudo apt-get update -q
